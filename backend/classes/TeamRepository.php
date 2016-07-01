@@ -20,6 +20,10 @@ class TeamRepository {
 		}
 		return self::$teams;
 	}
+	public static function addTeam($name, $iso_code) {
+		return Team::addTeam($name, $iso_code);
+	}
+
 	public static function getUsers() {
 		if (count ( self::$users ) === 0) {
 			self::init ();

@@ -1,0 +1,14 @@
+<h3>Teams:</h3>
+<ul>
+  <li *ngFor="let team of teams">
+    {{team.name}}
+  </li>
+</ul>
+New team name:
+<input #newTeamName />
+New iso code:
+<input #newTeamCode />
+<button (click)="addTeam(newTeamName.value,newTeamCode.value); newTeamName.value=''">
+  Add Team
+</button>
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>

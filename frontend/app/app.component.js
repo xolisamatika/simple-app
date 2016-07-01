@@ -9,15 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+require('./rxjs-operators');
+var team_list_component_1 = require('./teams/team-list.component');
+var event_form_component_1 = require('./events/event-form.component');
+var team_form_component_1 = require('./teams/team-form.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
-    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'simple-app',
-            templateUrl: 'app/app.component.html'
+            templateUrl: 'app/app.component.html',
+            //	providers: [ HTTP_PROVIDERS ]
+            directives: [team_list_component_1.TeamListComponent, event_form_component_1.EventFormComponent, team_form_component_1.TeamFormComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
